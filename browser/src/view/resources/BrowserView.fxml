@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.BrowserController">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="New Tab" onAction="#createNewTab"/>
+            <MenuItem text="Exit" onAction="#exit"/>
+        </Menu>
+        <Menu text="History" fx:id="historyMenu">
+            <MenuItem text="Clear History" onAction="#clearHistory"/>
+            <SeparatorMenuItem/>
+        </Menu>
+    </MenuBar>
+    
+    <ToolBar>
+        <Button fx:id="backButton" text="←"/>
+        <Button fx:id="forwardButton" text="→"/>
+        <Button fx:id="refreshButton" text="⟳"/>
+        <Button fx:id="homeButton" text="🏠"/>
+        <TextField fx:id="addressBar" HBox.hgrow="ALWAYS"/>
+    </ToolBar>
+    
+    <TabPane fx:id="tabPane" VBox.vgrow="ALWAYS"/>
+</VBox>
